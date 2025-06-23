@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Checkout Code'){
       steps{
-        git 'https://github.com/JoyrajLongjam/dev-ops/new/main'
+        git branch: 'main',url:'https://github.com/JoyrajLongjam/dev-ops/new/main.git'
       }
     }
     stage('Build'){
@@ -13,12 +13,12 @@ pipeline{
     }
     stage('Test'){
       steps{
-        sh 'echo "Running Tests"'
+        bat 'echo "Running tests"'
       }
     }
     stage('Deploy'){
       steps{
-        sh 'echo "deploying"'
+        bat 'echo "deploying"'
       }
     }
   }
