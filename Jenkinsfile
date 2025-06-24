@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Checkout Code'){
       steps{
-        git branch: 'main',url:'https://github.com/JoyrajLongjam/dev-ops/new/main.git'
+        git branch: 'main',url:'https://github.com/JoyrajLongjam/dev-ops.git'
       }
     }
     stage('Build'){
